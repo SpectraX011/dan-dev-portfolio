@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https://skillicons.dev https://streak-stats.demolab.com https://img.shields.io https://media.giphy.com;"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dan Dev | Portfolio</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <style>
+      :root {
+        --bg-color: #000000;
+        --sidebar-bg: #111111;
+        --accent-color: #ffffff;
+        --text-main: #ffffff;
+        --text-muted: #888888;
+        --sidebar-width: 120px;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        line-height: 1.6;
+        scroll-behavior: smooth;
+      }
+
+      nav {
+        height: 100%;
+        width: var(--sidebar-width);
+        background-color: var(--sidebar-bg);
+        position: fixed;
+        left: 0;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 100;
+      }
+
+      .nav-profile-img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        filter: grayscale(100%);
+        margin-bottom: 20px;
+        border-bottom: 1px solid #333;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: var(--text-muted);
+        font-size: 11px;
+        width: 100%;
+        padding: 25px 0;
+        text-align: center;
+        transition: 0.3s;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      nav a i {
+        display: block;
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+      nav a:hover {
+        color: var(--text-main);
+        background: #222;
+      }
+
+      /* --- Main Content Area --- */
+      #main {
+        margin-left: var(--sidebar-width);
+        padding: 0 50px;
+      }
+      section {
+        padding: 100px 0;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      /* --- Hero Section --- */
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 4.5rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      .hero p {
+        font-size: 1.2rem;
+        color: var(--text-muted);
+        letter-spacing: 3px;
+        text-transform: uppercase;
+      }
+
+      .hero-img {
+        width: 100%;
+        max-width: 700px;
+        margin-top: 50px;
+        border-radius: 4px;
+        filter: grayscale(100%) contrast(110%);
+        opacity: 0.9;
+      }
+
+      h2 {
+        font-size: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        margin-bottom: 20px;
+      }
+      .separator {
+        width: 100px;
+        height: 2px;
+        background: var(--text-muted);
+        margin-bottom: 40px;
+      }
+      .content-text {
+        color: var(--text-muted);
+        font-size: 1.1rem;
+        text-align: justify;
+        margin-bottom: 40px;
+        max-width: 800px;
+      }
+
+      .list-group {
+        list-style: none;
+        margin-bottom: 40px;
+      }
+      .list-group li {
+        margin-bottom: 15px;
+        color: var(--text-muted);
+        padding-left: 20px;
+        border-left: 2px solid #333;
+      }
+      .list-group b {
+        color: var(--text-main);
+        display: block;
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+      }
+
+      .center-box {
+        text-align: center;
+        padding: 40px 0;
+      }
+      .tech-icons img {
+        margin: 10px;
+      }
+
+      @media only screen and (max-width: 768px) {
+        nav {
+          width: 100%;
+          height: auto;
+          position: sticky;
+          flex-direction: row;
+          justify-content: space-around;
+          padding: 0;
+        }
+        .nav-profile-img {
+          display: none;
+        }
+        #main {
+          margin-left: 0;
+          padding: 0 20px;
+        }
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <img src="dp.jpg" alt="Dan Dev Profile" class="nav-profile-img" />
+      <a href="#home"><i class="fa fa-home"></i>Home</a>
+      <a href="#about"><i class="fa fa-user"></i>About</a>
+      <a href="#work"><i class="fa fa-briefcase"></i>Work</a>
+      <a href="#contact"><i class="fa fa-envelope"></i>Contact</a>
+    </nav>
+
+    <div id="main">
+      <header class="hero" id="home">
+        <h1>I'm Dan Dev.</h1>
+        <p>Freelance Web Developer</p>
+        <img src="dp.jpg" alt="Dan Dev Featured" class="hero-img" />
+      </header>
+
+      <section id="about">
+        <h2>About Me</h2>
+        <div class="separator"></div>
+        <p class="content-text">
+          I am a Freelance Web Developer passionate about creating secure,
+          functional, and user-friendly web systems. I design and build websites
+          and web applications for clients, helping them improve their business
+          online. My work includes planning, developing, and delivering complete
+          web solutions, always with clear communication and collaboration to
+          meet client needs.
+        </p>
+
+        <h2>Technical Skills</h2>
+        <div class="separator"></div>
+        <ul class="list-group">
+          <li>
+            <b>Front-End Development</b> HTML, CSS, JavaScript, Java (JFrame)
+            Desktop GUI, VS Code, NetBeans
+          </li>
+          <li>
+            <b>Back-End Development</b> PHP (Laravel), Java (NetBeans,
+            Ant/Maven) CRUD systems, MySQL Database Design, Python Automation
+          </li>
+          <li>
+            <b>Networking & Security</b> IP Addressing, Routing, Switching,
+            Cisco Packet Tracer, Ethical Hacking (Nmap, Wireshark, Metasploit)
+          </li>
+        </ul>
+      </section>
+
+      <section id="work">
+        <h2>Work Experience</h2>
+        <div class="separator"></div>
+        <div class="list-group">
+          <li>
+            <b>Freelancer — Web Dev</b>
+            Crafting web systems using PHP, Java, Python, and modern web tech. I
+            focus on database management with MySQL and integrating security
+            features to protect client data.
+          </li>
+          <li>
+            <b>Student Assistant — BAC & Planning Engineering</b>
+            Gained experience in organizational planning and technical
+            documentation while maintaining a balance between professional and
+            academic duties.
+          </li>
+        </div>
+      </section>
+
+      <section class="center-box">
+        <h2>Tech Stack</h2>
+        <div class="tech-icons">
+          <img
+            src="https://skillicons.dev/icons?i=php,laravel,java,python,mysql,html,css,js"
+            height="60"
+            alt="tech stack"
+          />
+        </div>
+      </section>
+
+      <section class="center-box">
+        <h2>GitHub Activity</h2>
+        <img
+          src="https://streak-stats.demolab.com?user=SpectraX011&locale=en&mode=daily&theme=dracula&hide_border=false&border_radius=5"
+          style="max-width: 100%"
+          alt="streak graph"
+        />
+      </section>
+
+      <section id="contact" class="center-box">
+        <h2>Connect With Me</h2>
+        <div class="separator" style="margin: 0 auto 40px auto"></div>
+        <div class="badge-container">
+          <a
+            href="https://www.linkedin.com/in/dan-dev-7abb75232/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img
+              src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"
+              height="25"
+          /></a>
+
+          <a href="#" id="secure-email"
+            ><img
+              src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"
+              height="25"
+          /></a>
+
+          <a
+            href="https://www.facebook.com/null.r00t"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img
+              src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white"
+              height="25"
+          /></a>
+          <a
+            href="https://www.instagram.com/l3tdan.code/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img
+              src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"
+              height="25"
+          /></a>
+        </div>
+      </section>
+
+      <footer class="center-box">
+        <p style="color: #444; font-size: 11px; letter-spacing: 2px">
+          © 2026 DAN DEV
+        </p>
+      </footer>
+    </div>
+
+    <script>
+      document
+        .getElementById("secure-email")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          const user = "dandevjr";
+          const domain = "gmail.com";
+          window.location.href = "mailto:" + user + "@" + domain;
+        });
+
+      window.addEventListener("scroll", () => {
+        let current = "";
+        const sections = document.querySelectorAll("section, header");
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          if (pageYOffset >= sectionTop - 60) {
+            current = section.getAttribute("id");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
